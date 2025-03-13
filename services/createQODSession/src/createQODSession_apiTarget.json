@@ -1,0 +1,380 @@
+{
+  "basePath" : "${rest.createQODSession.basepath}",
+  "paths" : {
+    "/NACServices/services/device/qod" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "createQODSession_invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "in" : "body",
+          "name" : "RequestBody",
+          "description" : "RequestBody",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object",
+          "required" : false
+        } ],
+        "tags" : [ "createQODSession" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-BASE_PATH" : "/NACServices/services/device/qod",
+      "x-WM-TAG" : "createQODSession",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.createQODSession.scheme}://${rest.createQODSession.host}${rest.createQODSession.basepath}/NACServices/services/device/qod"
+    }
+  },
+  "host" : "${rest.createQODSession.host}",
+  "schemes" : [ "${rest.createQODSession.scheme}" ],
+  "definitions" : {
+    "Request.device" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Request.device",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "ipv4Address", "ipv6Address", "networkAccessIdentifier", "phoneNumber" ],
+      "properties" : {
+        "phoneNumber" : {
+          "type" : "string"
+        },
+        "ipv6Address" : {
+          "type" : "string"
+        },
+        "ipv4Address" : {
+          "$ref" : "#/definitions/Request.ipv4Address"
+        },
+        "networkAccessIdentifier" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.data" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Response.data",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "applicationServer", "applicationServerPorts", "device", "devicePorts", "duration", "expiresAt", "notificationAuthToken", "notificationUrl", "qosProfile", "qosStatus", "sessionId", "startedAt", "webhook" ],
+      "properties" : {
+        "notificationUrl" : {
+          "type" : "string"
+        },
+        "webhook" : {
+          "$ref" : "#/definitions/Response.webhook"
+        },
+        "applicationServerPorts" : {
+          "$ref" : "#/definitions/Response.applicationServerPorts"
+        },
+        "startedAt" : {
+          "type" : "string"
+        },
+        "sessionId" : {
+          "type" : "string"
+        },
+        "expiresAt" : {
+          "type" : "string"
+        },
+        "devicePorts" : {
+          "$ref" : "#/definitions/Response.devicePorts"
+        },
+        "duration" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "qosProfile" : {
+          "type" : "string"
+        },
+        "qosStatus" : {
+          "type" : "string"
+        },
+        "applicationServer" : {
+          "$ref" : "#/definitions/Response.applicationServer"
+        },
+        "notificationAuthToken" : {
+          "type" : "string"
+        },
+        "device" : {
+          "$ref" : "#/definitions/Response.device"
+        }
+      }
+    },
+    "Request.applicationServer" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Request.applicationServer",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "ipv4Address", "ipv6Address" ],
+      "properties" : {
+        "ipv6Address" : {
+          "type" : "string"
+        },
+        "ipv4Address" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Request.devicePorts" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Request.devicePorts",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "ports", "ranges" ],
+      "properties" : {
+        "ranges" : {
+          "$ref" : "#/definitions/Request.ranges"
+        },
+        "ports" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Request.ranges" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Request.ranges",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "0" ],
+      "properties" : {
+        "0" : {
+          "$ref" : "#/definitions/Request.0"
+        }
+      }
+    },
+    "Response.applicationServer" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Response.applicationServer",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "ipv4Address", "ipv6Address" ],
+      "properties" : {
+        "ipv6Address" : {
+          "type" : "string"
+        },
+        "ipv4Address" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Request.webhook" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Request.webhook",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "notificationAuthToken", "notificationUrl" ],
+      "properties" : {
+        "notificationUrl" : {
+          "type" : "string"
+        },
+        "notificationAuthToken" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.devicePorts" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Response.devicePorts",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "ports", "ranges" ],
+      "properties" : {
+        "ranges" : {
+          "$ref" : "#/definitions/Response.ranges"
+        },
+        "ports" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.device" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Response.device",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "ipv4Address", "ipv6Address", "networkAccessIdentifier", "phoneNumber" ],
+      "properties" : {
+        "phoneNumber" : {
+          "$ref" : "#/definitions/Response.phoneNumber"
+        },
+        "ipv6Address" : {
+          "type" : "string"
+        },
+        "ipv4Address" : {
+          "$ref" : "#/definitions/Response.ipv4Address"
+        },
+        "networkAccessIdentifier" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.applicationServerPorts" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Response.applicationServerPorts",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "ports", "ranges" ],
+      "properties" : {
+        "ranges" : {
+          "$ref" : "#/definitions/Response.ranges"
+        },
+        "ports" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Request.applicationServerPorts" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Request.applicationServerPorts",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "ports", "ranges" ],
+      "properties" : {
+        "ranges" : {
+          "$ref" : "#/definitions/Request.ranges"
+        },
+        "ports" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.ipv4Address" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Response.ipv4Address",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "privateAddress", "publicAddress", "publicPort" ],
+      "properties" : {
+        "privateAddress" : {
+          "type" : "string"
+        },
+        "publicPort" : {
+          "type" : "string"
+        },
+        "publicAddress" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.0" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Response.0",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "from", "to" ],
+      "properties" : {
+        "from" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "to" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "Response.ranges" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Response.ranges",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "0" ],
+      "properties" : {
+        "0" : {
+          "$ref" : "#/definitions/Response.0"
+        }
+      }
+    },
+    "Response.webhook" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Response.webhook",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "notificationAuthToken", "notificationUrl" ],
+      "properties" : {
+        "notificationUrl" : {
+          "type" : "string"
+        },
+        "notificationAuthToken" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RootRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.RootRequest",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "applicationServer", "applicationServerPorts", "device", "devicePorts", "duration", "notificationAuthToken", "notificationUrl", "qosProfile", "webhook" ],
+      "properties" : {
+        "notificationUrl" : {
+          "type" : "string"
+        },
+        "duration" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "qosProfile" : {
+          "type" : "string"
+        },
+        "webhook" : {
+          "$ref" : "#/definitions/Request.webhook"
+        },
+        "applicationServer" : {
+          "$ref" : "#/definitions/Request.applicationServer"
+        },
+        "notificationAuthToken" : {
+          "type" : "string"
+        },
+        "applicationServerPorts" : {
+          "$ref" : "#/definitions/Request.applicationServerPorts"
+        },
+        "device" : {
+          "$ref" : "#/definitions/Request.device"
+        },
+        "devicePorts" : {
+          "$ref" : "#/definitions/Request.devicePorts"
+        }
+      }
+    },
+    "Response.phoneNumber" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Response.phoneNumber",
+      "x-WM-TAGS" : [ "createQODSession" ]
+    },
+    "Request.ipv4Address" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Request.ipv4Address",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "privateAddress", "publicAddress", "publicPort" ],
+      "properties" : {
+        "privateAddress" : {
+          "type" : "string"
+        },
+        "publicPort" : {
+          "type" : "string"
+        },
+        "publicAddress" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.RootResponse",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "data", "message", "status" ],
+      "properties" : {
+        "data" : {
+          "$ref" : "#/definitions/Response.data"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Request.0" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "createQODSession.Request.0",
+      "x-WM-TAGS" : [ "createQODSession" ],
+      "required" : [ "from", "to" ],
+      "properties" : {
+        "from" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "to" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "888003df-a165-4bdb-8a80-5576c53595d7",
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "createQODSession"
+  } ]
+}

@@ -1,0 +1,134 @@
+<wm-prefab-container name="prefab_container1">
+    <wm-container name="container3" padding="2em">
+        <wm-container name="containerHeader">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                        <wm-label padding="unset" class="p label-header " type="p" name="label1" caption="Boost Speed"
+                            fontweight="bold"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                        <wm-label padding="unset" class="p deviceName" type="p" name="label2" caption="bind:devicename">
+                        </wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-container>
+        <wm-layoutgrid name="layoutgrid2" show="true">
+            <wm-gridrow name="gridrow3" padding="1em unset unset unset">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn3_1">
+                    <wm-label padding="unset" class="p subTitile" type="p" name="label3" caption="Choose Uplink Boost">
+                    </wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow4">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                    <wm-container name="containerSlider" class="sliderContainer">
+                        <wm-slider name="slider1" step="0" minvalue="1" maxvalue="3"
+                            datavalue="bind:qodprofile.split(&quot;_&quot;)[1]==&quot;M&quot; ? 2 :qodprofile.split(&quot;_&quot;)[1]==&quot;L&quot; ? 3 : 1"
+                            width="100%" on-change="slider1Change($event, widget, newVal, oldVal)"></wm-slider>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow5">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn5_1">
+                    <wm-container name="containerLabels" class="labels">
+                        <wm-container name="container7_1" class="label-icon">
+                            <wm-label padding="unset" class="p wm-label" type="p" name="label4" caption="Small">
+                            </wm-label>
+                        </wm-container>
+                        <wm-container name="container8" class="label-icon">
+                            <wm-label padding="unset" class="p wm-label" type="p" name="label5" caption="Medium">
+                            </wm-label>
+                        </wm-container>
+                        <wm-container name="container9" class="label-icon">
+                            <wm-label padding="unset" class="p wm-label" type="p" name="label6" caption="Large">
+                            </wm-label>
+                        </wm-container>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+        <wm-layoutgrid show="true" name="layoutgrid4">
+            <wm-gridrow name="gridrow7">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn9_1">
+                    <wm-label padding="unset" class="p subTitile" type="p" caption="Choose Downlink Boost"
+                        name="label7"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow8">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                    <wm-container class="sliderContainer" name="container6">
+                        <wm-slider step="0" minvalue="1" maxvalue="3"
+                            datavalue="bind:qodprofile.split(&quot;_&quot;)[3]==&quot;M&quot; ? 2 :qodprofile.split(&quot;_&quot;)[3]==&quot;L&quot; ? 3 : 1"
+                            width="100%" on-change="slider2Change($event, widget, newVal, oldVal)" name="slider2">
+                        </wm-slider>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow9">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn11">
+                    <wm-container class="labels" name="container10">
+                        <wm-container name="container11">
+                            <wm-label padding="unset" class="p wm-label" type="p" caption="Small" name="label11">
+                            </wm-label>
+                        </wm-container>
+                        <wm-container name="container12">
+                            <wm-label padding="unset" class="p wm-label" type="p" caption="Medium" name="label12">
+                            </wm-label>
+                        </wm-container>
+                        <wm-container name="container13">
+                            <wm-label padding="unset" class="p wm-label" type="p" caption="Large" name="label13">
+                            </wm-label>
+                        </wm-container>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow9_1" padding="unset unset 1em unset">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                    <wm-label padding="unset" class="p subTitile" type="p" name="label11_1" caption="Choose duration">
+                    </wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow14">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn19" class="col-xs-6" padding="unset 8px unset unset">
+                    <wm-select name="select1" dataset="bind:Variables.hours.dataSet" datafield="hour" datavalue="0"
+                        displayfield="hour" displayexpression="bind:$[hour]+ &quot; hours&quot;"></wm-select>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn14" class="col-xs-6" padding="unset unset unset 8px">
+                    <wm-select name="select2" dataset="bind:Variables.minutes.dataSet" datafield="minutes"
+                        displayfield="minutes" displayexpression="bind:$[minutes]+&quot; minutes&quot;" datavalue="0">
+                    </wm-select>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow13">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn17_1">
+                    <wm-container name="container13_1" class="wrapper-buttons">
+                        <wm-button class="btn-default" caption="15 mintues" type="button" margin="unset" name="button1">
+                        </wm-button>
+                        <wm-button class="btn-default" caption="30 minutes" type="button" margin="unset" name="button2">
+                        </wm-button>
+                        <wm-button class="btn-default" caption="1 hour" type="button" margin="unset" name="button3">
+                        </wm-button>
+                        <wm-button class="btn-default" caption="2 hours" type="button" margin="unset" name="button4">
+                        </wm-button>
+                        <wm-button class="btn-default" caption="3 hours" type="button" margin="unset" name="button10">
+                        </wm-button>
+                        <wm-button class="btn-default" caption="4 hours" type="button" margin="unset" name="button11">
+                        </wm-button>
+                        <wm-button class="btn-default" caption="5 hours" type="button" margin="unset" name="button12">
+                        </wm-button>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow12_1">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn16_1" horizontalalign="center">
+                    <wm-button class=" btn-primary" caption="bind:appLocale.BOOST_QOD_LBL" type="button" margin="unset"
+                        name="button5" width="100%" on-click="Variables.wsCreateQODSession.invoke()"></wm-button>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-container>
+</wm-prefab-container>

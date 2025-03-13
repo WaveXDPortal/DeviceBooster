@@ -1,0 +1,264 @@
+{
+  "hours" : {
+    "_id" : "wm-hours-wm.Variable-1738160239753",
+    "name" : "hours",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "hour" : 0
+    }, {
+      "hour" : 1
+    }, {
+      "hour" : 2
+    }, {
+      "hour" : 3
+    }, {
+      "hour" : 4
+    }, {
+      "hour" : 5
+    }, {
+      "hour" : 6
+    }, {
+      "hour" : 7
+    }, {
+      "hour" : 8
+    }, {
+      "hour" : 9
+    }, {
+      "hour" : 10
+    }, {
+      "hour" : 11
+    }, {
+      "hour" : 12
+    }, {
+      "hour" : 13
+    }, {
+      "hour" : 14
+    }, {
+      "hour" : 15
+    }, {
+      "hour" : 16
+    }, {
+      "hour" : 17
+    }, {
+      "hour" : 18
+    }, {
+      "hour" : 19
+    }, {
+      "hour" : 20
+    }, {
+      "hour" : 21
+    }, {
+      "hour" : 22
+    }, {
+      "hour" : 23
+    }, {
+      "hour" : 24
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "minutes" : {
+    "_id" : "wm-minutes-wm.Variable-1738160902687",
+    "name" : "minutes",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "minutes" : 0
+    }, {
+      "minutes" : 1
+    }, {
+      "minutes" : 2
+    }, {
+      "minutes" : 3
+    }, {
+      "minutes" : 4
+    }, {
+      "minutes" : 5
+    }, {
+      "minutes" : 6
+    }, {
+      "minutes" : 7
+    }, {
+      "minutes" : 8
+    }, {
+      "minutes" : 9
+    }, {
+      "minutes" : 10
+    }, {
+      "minutes" : 11
+    }, {
+      "minutes" : 12
+    }, {
+      "minutes" : 13
+    }, {
+      "minutes" : 14
+    }, {
+      "minutes" : 15
+    }, {
+      "minutes" : 16
+    }, {
+      "minutes" : 17
+    }, {
+      "minutes" : 18
+    }, {
+      "minutes" : 19
+    }, {
+      "minutes" : 20
+    }, {
+      "minutes" : 21
+    }, {
+      "minutes" : 22
+    }, {
+      "minutes" : 23
+    }, {
+      "minutes" : 24
+    }, {
+      "minutes" : 25
+    }, {
+      "minutes" : 26
+    }, {
+      "minutes" : 27
+    }, {
+      "minutes" : 28
+    }, {
+      "minutes" : 29
+    }, {
+      "minutes" : 30
+    }, {
+      "minutes" : 31
+    }, {
+      "minutes" : 32
+    }, {
+      "minutes" : 33
+    }, {
+      "minutes" : 34
+    }, {
+      "minutes" : 35
+    }, {
+      "minutes" : 36
+    }, {
+      "minutes" : 37
+    }, {
+      "minutes" : 38
+    }, {
+      "minutes" : 39
+    }, {
+      "minutes" : 40
+    }, {
+      "minutes" : 41
+    }, {
+      "minutes" : 42
+    }, {
+      "minutes" : 43
+    }, {
+      "minutes" : 44
+    }, {
+      "minutes" : 45
+    }, {
+      "minutes" : 46
+    }, {
+      "minutes" : 47
+    }, {
+      "minutes" : 48
+    }, {
+      "minutes" : 49
+    }, {
+      "minutes" : 50
+    }, {
+      "minutes" : 51
+    }, {
+      "minutes" : 52
+    }, {
+      "minutes" : 53
+    }, {
+      "minutes" : 54
+    }, {
+      "minutes" : 55
+    }, {
+      "minutes" : 56
+    }, {
+      "minutes" : 57
+    }, {
+      "minutes" : 58
+    }, {
+      "minutes" : 59
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "notificationActionQODRequest" : {
+    "_id" : "wm-notificationActionQODRequest-wm.NotificationVariable-1738217903979",
+    "name" : "notificationActionQODRequest",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "string"
+    }, {
+      "target" : "text",
+      "value" : "QOD Request sent successfully",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "3000",
+      "type" : "number"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "string"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "string"
+    } ],
+    "operation" : "toast"
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "wsCreateQODSession" : {
+    "_id" : "wm-wsCreateQODSession-wm.ServiceVariable-1738159299923",
+    "name" : "wsCreateQODSession",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "isList" : false,
+      "target" : "RequestBody",
+      "value" : " {\n          \"qosProfile\": \"DOWNLINK_S_UPLINK_S\",\n          \"device\": {\n            \"phoneNumber\": \"0123456789\",\n            \"networkAccessIdentifier\": \"\",\n            \"ipv4Address\": {\n              \"publicAddress\": \"\",\n              \"privateAddress\": \"test\",\n              \"publicPort\": \"\"\n            },\n            \"ipv6Address\": \"\"\n          },\n          \"devicePorts\": {\n            \"ranges\": {\n              \"0\": {\n                \"from\": 0,\n                \"to\": 0\n              }\n            },\n            \"ports\": \"\"\n          },\n          \"applicationServer\": {\n            \"ipv4Address\": \"\",\n            \"ipv6Address\": \"\"\n          },\n          \"applicationServerPorts\": {\n            \"ranges\": {\n              \"0\": {\n                \"from\": 0,\n                \"to\": 0\n              }\n            },\n            \"ports\": \"\"\n          },\n          \"webhook\": {\n            \"notificationUrl\": \"\",\n            \"notificationAuthToken\": \"\"\n          },\n          \"notificationUrl\": \"\",\n          \"notificationAuthToken\": \"\",\n          \"duration\": 0\n        }",
+      "type" : "createQODSession.RootRequest"
+    } ],
+    "type" : "createQODSession.RootResponse",
+    "service" : "createQODSession",
+    "operation" : "invoke",
+    "operationId" : "createQODSession_invoke",
+    "operationType" : "post",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "wsCreateQODSessiononSuccess(variable, data, options)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "createQODSession"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "migrationTaskDetailsList" : [ {
+    "onReleaseVersion" : "11.9",
+    "migrationVersion" : 119.02,
+    "migrationMessages" : [ {
+      "msg" : "Deleted Dockerfile.build file",
+      "args" : [ ]
+    }, {
+      "msg" : "Updated Dockerfile which simplifies WaveMaker App Docker Image creation",
+      "args" : [ ]
+    } ]
+  }, {
+    "onReleaseVersion" : "11.9",
+    "migrationVersion" : 119.03,
+    "migrationMessages" : [ {
+      "msg" : "Added languageBundleSources and serviceDefSources property with value as STATIC in .wmproject.properties",
+      "args" : [ ]
+    }, {
+      "msg" : "Added app.apiUrl property in app.properties and made it configurable from all profile property files with empty value as default",
+      "args" : [ ]
+    } ]
+  }, {
+    "onReleaseVersion" : "11.9",
+    "migrationVersion" : 119.04,
+    "migrationMessages" : [ ]
+  }, {
+    "onReleaseVersion" : "11.9",
+    "migrationVersion" : 119.05,
+    "migrationMessages" : [ ]
+  }, {
+    "onReleaseVersion" : "11.9",
+    "migrationVersion" : 119.06,
+    "migrationMessages" : [ ]
+  }, {
+    "onReleaseVersion" : "11.9",
+    "migrationVersion" : 119.072,
+    "migrationMessages" : [ {
+      "msg" : "Updated ui-build.js and build.xml files",
+      "args" : [ ]
+    } ]
+  } ]
+}

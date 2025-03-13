@@ -1,0 +1,178 @@
+.label-header {
+    font-size: 24px;
+    font-family: 'Inter';
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.deviceName {
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 500;
+    color: #69728C;
+}
+
+.subTitile {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'DM Sans';
+    color: var(--primary-color);
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+    padding: 5px 0;
+}
+
+.sliderContainer {
+    border: 1px solid rgb(227, 216, 216);
+    padding: 1em 0.5em;
+    border-radius: 44px;
+    margin: 1em 0;
+    height: 42px;
+}
+
+.wm-label {
+    font-weight: 500;
+    font-family: 'Inter';
+    color: #1F2B57;
+}
+
+.container-selects {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.wrapper-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+
+
+
+
+
+:root {
+    --slider1-bg: #E5E7EB;
+    --slider2-bg: #E5E7EB;
+}
+
+.app-slider input[type=range] {
+    color: white;
+    border: 0 solid transparent;
+    background-color: transparent;
+    border-width: 0 7px;
+    padding: 0;
+    width: 100%;
+    height: 17px;
+    opacity: .65;
+    cursor: pointer
+}
+
+.app-slider input[name="slider1"]::-webkit-slider-runnable-track {
+
+    height: 8px;
+    border-radius: 4px;
+    background: var(--slider1-bg);
+}
+
+.app-slider input[name="slider2"]::-webkit-slider-runnable-track {
+
+    height: 8px;
+    border-radius: 4px;
+    background: var(--slider2-bg);
+}
+
+.app-slider input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 18.8px;
+    width: 18.8px;
+    background-color: white;
+    border: 0.94px solid rgba(128, 128, 128, 0.906);
+    border-radius: 50%;
+    position: relative;
+    margin-top: -5px;
+
+}
+
+.app-slider input[type=range]::-ms-thumb {
+    height: 16px;
+    width: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.wm-app .form-control {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 14px;
+    font-size: 16px;
+    font-family: DM sans-serif;
+    line-height: 1.42857143;
+    color: #AEAEAE;
+    background-color: #fff;
+    background-image: none;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.wm-app .btn-default {
+    border: 1px solid #C7CFD9;
+    background: white;
+    border-radius: 6px;
+    margin: 1.5em 1em 0 0;
+    height: 36px;
+    color: #AEAEAE;
+    text-transform: capitalize;
+
+}
+
+.wm-app .btn-primary {
+    color: #fff;
+    background-color: #1666FF;
+    border-radius: 8px;
+    border: 0;
+    height: 100%;
+    margin-top: 1.5em;
+    padding: 10px 0px;
+    font-size: 16px;
+    font-family: 'Inter';
+    text-transform: capitalize;
+
+}
+
+.wm-app .btn-default:hover,
+.wm-app .btn-default:focus .wm-app .btn-default:active {
+    background-color: white;
+    color: black;
+    border: 1px solid #30373B;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.wm-app .btn-default:active,
+.wm-app .btn-default.active,
+.open>.dropdown-toggle.wm-app .btn-default {
+    background-color: white;
+    color: black;
+    border: 1px solid #30373B;
+    font-weight: 600;
+    text-transform: capitalize;
+}

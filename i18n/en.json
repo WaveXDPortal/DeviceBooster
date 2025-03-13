@@ -1,0 +1,16 @@
+{
+  "messages" : {
+    "BOOST_QOD_LBL" : "Boost Speed"
+  },
+  "formats" : {
+    "date" : "MMM d, y",
+    "time" : "h:mm:ss a",
+    "currency" : "USD"
+  },
+  "files" : {
+    "angular" : "en",
+    "fullCalendar" : null,
+    "moment" : null
+  },
+  "prefabMessages" : { }
+}

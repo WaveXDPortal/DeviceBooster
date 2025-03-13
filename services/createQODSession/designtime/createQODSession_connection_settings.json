@@ -1,0 +1,31 @@
+{
+  "endpointAddress" : "https://cloud.wavemakeronline.com/nac/NACServices/services/device/qod",
+  "method" : "POST",
+  "headers" : { },
+  "redirectEnabled" : true,
+  "requestBody" : " {\n          \"qosProfile\": \"DOWNLINK_S_UPLINK_S\",\n          \"device\": {\n            \"phoneNumber\": \"0123456789\",\n            \"networkAccessIdentifier\": \"\",\n            \"ipv4Address\": {\n              \"publicAddress\": \"\",\n              \"privateAddress\": \"test\",\n              \"publicPort\": \"\"\n            },\n            \"ipv6Address\": \"\"\n          },\n          \"devicePorts\": {\n            \"ranges\": {\n              \"0\": {\n                \"from\": 0,\n                \"to\": 0\n              }\n            },\n            \"ports\": \"\"\n          },\n          \"applicationServer\": {\n            \"ipv4Address\": \"\",\n            \"ipv6Address\": \"\"\n          },\n          \"applicationServerPorts\": {\n            \"ranges\": {\n              \"0\": {\n                \"from\": 0,\n                \"to\": 0\n              }\n            },\n            \"ports\": \"\"\n          },\n          \"webhook\": {\n            \"notificationUrl\": \"\",\n            \"notificationAuthToken\": \"\"\n          },\n          \"notificationUrl\": \"\",\n          \"notificationAuthToken\": \"\",\n          \"duration\": 0\n        }",
+  "queryParams" : { },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : [ ],
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Transfer-Encoding" : [ "chunked" ],
+      "Connection" : [ "keep-alive" ],
+      "X-WM-Request-Track-Id" : [ "app.yfGLdzAZ" ],
+      "Cache-Control" : [ "no-cache, no-store, must-revalidate" ],
+      "Pragma" : [ "no-cache" ],
+      "Expires" : [ "Thu, 01 Jan 1970 00:00:00 GMT" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Content-Security-Policy" : [ "frame-ancestors 'self'" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "Vary" : [ "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers" ],
+      "Server-Timing" : [ "server;dur=125" ],
+      "Date" : [ "Wed, 29 Jan 2025 13:43:27 GMT" ]
+    },
+    "responseBody" : "{\"status\":\"success\",\"message\":\"Create QOD session requested successfully\",\"data\":{\"qosProfile\":\"DOWNLINK_S_UPLINK_S\",\"device\":{\"phoneNumber\":{},\"networkAccessIdentifier\":\"\",\"ipv4Address\":{\"publicAddress\":\"\",\"privateAddress\":\"\",\"publicPort\":\"\"},\"ipv6Address\":\"\"},\"devicePorts\":{\"ranges\":{\"0\":{\"from\":0,\"to\":0}},\"ports\":\"\"},\"applicationServer\":{\"ipv4Address\":\"\",\"ipv6Address\":\"\"},\"applicationServerPorts\":{\"ranges\":{\"0\":{\"from\":0,\"to\":0}},\"ports\":\"\"},\"webhook\":{\"notificationUrl\":\"\",\"notificationAuthToken\":\"\"},\"notificationUrl\":\"\",\"notificationAuthToken\":\"\",\"sessionId\":\"testQOSSession\",\"qosStatus\":\"REQUESTED\",\"startedAt\":\"\",\"expiresAt\":\"\",\"duration\":0}}",
+    "convertedResponse" : null
+  }
+}
